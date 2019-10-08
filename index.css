@@ -9,6 +9,7 @@ body {
 
 img {
     width: 250px;
+    margin: 1rem;
 }
 
 main {
@@ -22,3 +23,15 @@ main {
   h1 {
     margin: 3rem 1rem 6rem 1rem;
   }
+
+  .artObject {
+    max-width: 80%;
+    padding: 1rem;
+    align-self: flex-end;
+}
+
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
