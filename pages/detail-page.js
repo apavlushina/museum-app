@@ -8,11 +8,15 @@ function submitComment () {
     let paragraph = document.createElement('p');
 
     h3.textContent = `${name} said:`;
-    paragraph.textContent = `${msg}`;
+    paragraph.textContent = `"${msg}"`;
     comment.classList.add('comment');
     comment.appendChild(h3);
     comment.appendChild(paragraph);
 
-
-    console.log(comment);
+    commentSection = document.getElementById('comments');
+    commentSection.appendChild(comment)
+    
+    
+    inputField.value = null;
+    textArea.value = null;
 }
