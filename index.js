@@ -324,12 +324,20 @@ const data = {
     ]
   }
 
-  alert('hello')
+
+  function meetUserRequest(elem) {
+      let string = elem.longTitle;
+      var numbers = string.match(/\d+/g).map(Number);
+      return elem.webImage.width > 1500 && elem.principalOrFirstMaker.indexOf("Honthorst") < 0 && numbers[numbers.length - 1] < 1800;
+  }
+
   function displayPainting(painting) {
     const paintings = Array.from(painting);
     for (let i = 0; i < paintings.length; i++) {
        const currentPainting = paintings[i];
-       createImg(currentPainting);
+       if (meetUserRequest(currentPainting) == true) {
+           createImg(currentPainting);
+       } 
     }
   }
 
